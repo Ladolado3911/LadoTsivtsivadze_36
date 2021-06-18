@@ -14,6 +14,8 @@
 		240B125E267CB0F8001A177D /* LadoTsivtsivadze_36.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 240B125C267CB0F8001A177D /* LadoTsivtsivadze_36.xcdatamodeld */; };
 		240B1260267CB0F9001A177D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 240B125F267CB0F9001A177D /* Assets.xcassets */; };
 		240B1263267CB0F9001A177D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 240B1261267CB0F9001A177D /* LaunchScreen.storyboard */; };
+		240B127C267CB7E9001A177D /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240B127B267CB7E9001A177D /* UserManager.swift */; };
+		240B127E267CB7F6001A177D /* MailManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240B127D267CB7F6001A177D /* MailManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		240B125F267CB0F9001A177D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		240B1262267CB0F9001A177D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		240B1264267CB0F9001A177D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		240B127B267CB7E9001A177D /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		240B127D267CB7F6001A177D /* MailManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +198,8 @@
 		240B127A267CB29E001A177D /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				240B127B267CB7E9001A177D /* UserManager.swift */,
+				240B127D267CB7F6001A177D /* MailManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -271,6 +277,8 @@
 				240B125E267CB0F8001A177D /* LadoTsivtsivadze_36.xcdatamodeld in Sources */,
 				240B1258267CB0F8001A177D /* InboxController.swift in Sources */,
 				240B1254267CB0F8001A177D /* AppDelegate.swift in Sources */,
+				240B127C267CB7E9001A177D /* UserManager.swift in Sources */,
+				240B127E267CB7F6001A177D /* MailManager.swift in Sources */,
 				240B1256267CB0F8001A177D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

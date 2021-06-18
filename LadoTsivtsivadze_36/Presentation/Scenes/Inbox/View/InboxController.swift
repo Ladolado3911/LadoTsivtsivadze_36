@@ -8,6 +8,15 @@
 import UIKit
 
 class InboxController: UIViewController {
+    
+    
+    
+    override func loadView() {
+        super.loadView()
+        
+        
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

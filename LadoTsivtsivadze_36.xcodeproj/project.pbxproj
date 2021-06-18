@@ -25,6 +25,7 @@
 		240B1292267CBF3C001A177D /* Controllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240B1291267CBF3C001A177D /* Controllers.swift */; };
 		240B1294267CBFA0001A177D /* NavigationHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240B1293267CBFA0001A177D /* NavigationHelpers.swift */; };
 		240B1296267CBFC8001A177D /* IDs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240B1295267CBFC8001A177D /* IDs.swift */; };
+		240B1298267CC170001A177D /* InboxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240B1297267CC170001A177D /* InboxViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		240B1291267CBF3C001A177D /* Controllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controllers.swift; sourceTree = "<group>"; };
 		240B1293267CBFA0001A177D /* NavigationHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationHelpers.swift; sourceTree = "<group>"; };
 		240B1295267CBFC8001A177D /* IDs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDs.swift; sourceTree = "<group>"; };
+		240B1297267CC170001A177D /* InboxViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 		240B1271267CB20C001A177D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				240B1297267CC170001A177D /* InboxViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				240B1254267CB0F8001A177D /* AppDelegate.swift in Sources */,
 				240B1296267CBFC8001A177D /* IDs.swift in Sources */,
 				240B127C267CB7E9001A177D /* UserManager.swift in Sources */,
+				240B1298267CC170001A177D /* InboxViewModel.swift in Sources */,
 				240B1288267CBDB2001A177D /* RegisterController.swift in Sources */,
 				240B128F267CBE32001A177D /* OutboxController.swift in Sources */,
 				240B127E267CB7F6001A177D /* MailManager.swift in Sources */,

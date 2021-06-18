@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class InboxController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -27,6 +27,7 @@
 		240B1296267CBFC8001A177D /* IDs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240B1295267CBFC8001A177D /* IDs.swift */; };
 		240B1298267CC170001A177D /* InboxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240B1297267CC170001A177D /* InboxViewModel.swift */; };
 		240B129A267D06CE001A177D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240B1299267D06CE001A177D /* LoginViewModel.swift */; };
+		240B129C267D0A0B001A177D /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240B129B267D0A0B001A177D /* RegisterViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		240B1295267CBFC8001A177D /* IDs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDs.swift; sourceTree = "<group>"; };
 		240B1297267CC170001A177D /* InboxViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxViewModel.swift; sourceTree = "<group>"; };
 		240B1299267D06CE001A177D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		240B129B267D0A0B001A177D /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +197,7 @@
 		240B1276267CB236001A177D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				240B129B267D0A0B001A177D /* RegisterViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				240B125E267CB0F8001A177D /* LadoTsivtsivadze_36.xcdatamodeld in Sources */,
+				240B129C267D0A0B001A177D /* RegisterViewModel.swift in Sources */,
 				240B1292267CBF3C001A177D /* Controllers.swift in Sources */,
 				240B1258267CB0F8001A177D /* InboxController.swift in Sources */,
 				240B1254267CB0F8001A177D /* AppDelegate.swift in Sources */,

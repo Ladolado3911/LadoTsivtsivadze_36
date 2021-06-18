@@ -16,6 +16,12 @@
 		240B1263267CB0F9001A177D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 240B1261267CB0F9001A177D /* LaunchScreen.storyboard */; };
 		240B127C267CB7E9001A177D /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240B127B267CB7E9001A177D /* UserManager.swift */; };
 		240B127E267CB7F6001A177D /* MailManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240B127D267CB7F6001A177D /* MailManager.swift */; };
+		240B1282267CBD65001A177D /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240B1281267CBD65001A177D /* LoginController.swift */; };
+		240B1284267CBD88001A177D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 240B1283267CBD88001A177D /* Login.storyboard */; };
+		240B1286267CBD99001A177D /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 240B1285267CBD99001A177D /* Register.storyboard */; };
+		240B1288267CBDB2001A177D /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240B1287267CBDB2001A177D /* RegisterController.swift */; };
+		240B128D267CBE1A001A177D /* Outbox.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 240B128C267CBE1A001A177D /* Outbox.storyboard */; };
+		240B128F267CBE32001A177D /* OutboxController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240B128E267CBE32001A177D /* OutboxController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +36,12 @@
 		240B1264267CB0F9001A177D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		240B127B267CB7E9001A177D /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		240B127D267CB7F6001A177D /* MailManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailManager.swift; sourceTree = "<group>"; };
+		240B1281267CBD65001A177D /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		240B1283267CBD88001A177D /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		240B1285267CBD99001A177D /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
+		240B1287267CBDB2001A177D /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		240B128C267CBE1A001A177D /* Outbox.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Outbox.storyboard; sourceTree = "<group>"; };
+		240B128E267CBE32001A177D /* OutboxController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutboxController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,20 +104,21 @@
 		240B126C267CB1DD001A177D /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				240B1289267CBDED001A177D /* Outbox */,
 				240B126F267CB1EF001A177D /* Register */,
 				240B126E267CB1EA001A177D /* Login */,
-				240B126D267CB1E3001A177D /* Main */,
+				240B126D267CB1E3001A177D /* Inbox */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
 		};
-		240B126D267CB1E3001A177D /* Main */ = {
+		240B126D267CB1E3001A177D /* Inbox */ = {
 			isa = PBXGroup;
 			children = (
 				240B1271267CB20C001A177D /* ViewModel */,
 				240B1270267CB204001A177D /* View */,
 			);
-			path = Main;
+			path = Inbox;
 			sourceTree = "<group>";
 		};
 		240B126E267CB1EA001A177D /* Login */ = {
@@ -145,6 +158,8 @@
 		240B1272267CB21A001A177D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				240B1281267CBD65001A177D /* LoginController.swift */,
+				240B1283267CBD88001A177D /* Login.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -159,6 +174,8 @@
 		240B1275267CB231001A177D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				240B1285267CBD99001A177D /* Register.storyboard */,
+				240B1287267CBDB2001A177D /* RegisterController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -202,6 +219,31 @@
 				240B127D267CB7F6001A177D /* MailManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		240B1289267CBDED001A177D /* Outbox */ = {
+			isa = PBXGroup;
+			children = (
+				240B128A267CBDFA001A177D /* View */,
+				240B128B267CBE05001A177D /* ViewModel */,
+			);
+			path = Outbox;
+			sourceTree = "<group>";
+		};
+		240B128A267CBDFA001A177D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				240B128C267CBE1A001A177D /* Outbox.storyboard */,
+				240B128E267CBE32001A177D /* OutboxController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		240B128B267CBE05001A177D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,9 +303,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				240B1284267CBD88001A177D /* Login.storyboard in Resources */,
+				240B128D267CBE1A001A177D /* Outbox.storyboard in Resources */,
 				240B1263267CB0F9001A177D /* LaunchScreen.storyboard in Resources */,
 				240B1260267CB0F9001A177D /* Assets.xcassets in Resources */,
 				240B125B267CB0F8001A177D /* Main.storyboard in Resources */,
+				240B1286267CBD99001A177D /* Register.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,8 +323,11 @@
 				240B1258267CB0F8001A177D /* InboxController.swift in Sources */,
 				240B1254267CB0F8001A177D /* AppDelegate.swift in Sources */,
 				240B127C267CB7E9001A177D /* UserManager.swift in Sources */,
+				240B1288267CBDB2001A177D /* RegisterController.swift in Sources */,
+				240B128F267CBE32001A177D /* OutboxController.swift in Sources */,
 				240B127E267CB7F6001A177D /* MailManager.swift in Sources */,
 				240B1256267CB0F8001A177D /* SceneDelegate.swift in Sources */,
+				240B1282267CBD65001A177D /* LoginController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -30,5 +30,4 @@ final class ComposeViewModel: ComposeViewModelProtocol {
     func sendMail(from user1: User, to user2: User, completion: @escaping (Bool) -> Void) {
         
     }
- 
 }

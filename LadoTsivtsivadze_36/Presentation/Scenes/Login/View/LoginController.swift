@@ -27,16 +27,36 @@ class LoginController: UIViewController {
         
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        usernameField.text = ""
+        passwordField.text = ""
+    }
+    
     func configViewModel() {
         userManager = UserManager()
         loginViewModel = LoginViewModel(with: userManager, rootController: self)
     }
     
     @IBAction func onLogin(_ sender: UIButton) {
-        
+        if usernameField.text == "" || passwordField.text == "" {
+            return
+        }
+        loginViewModel.login(username: usernameField.text!, password: passwordField.text!) { user in
+            let vc = Controllers.inboxController
+            if let user = user {
+                //vc.navigationItem.hidesBackButton = true
+                print("Found User")
+                //pushController(from: self, to: vc, method: .withBackItem)
+            }
+            else {
+                print("Could not find user")
+            }
+        }
     }
     
     @IBAction func goToRegister(_ sender: UIButton) {
-        
+        pushController(from: self, to: Controllers.registerController, method: .withBackItem)
     }
 }

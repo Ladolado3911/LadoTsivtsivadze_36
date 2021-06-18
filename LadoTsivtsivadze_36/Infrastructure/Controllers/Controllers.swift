@@ -9,23 +9,24 @@ import Foundation
 import UIKit
 
 class Controllers {
-    static var outboxController: OutboxController = {
+    
+    var outboxController: OutboxController {
         let vc = getController(storyboardID: .outbox, controllerID: .outbox) as? OutboxController
         return vc!
-    }()
+    }
     
-    static var loginController: LoginController = {
+    var loginController: LoginController {
         let vc = getController(storyboardID: .login, controllerID: .login) as? LoginController
         return vc!
-    }()
+    }
     
-    static var registerController: RegisterController = {
+    var registerController: RegisterController {
         let vc = getController(storyboardID: .register, controllerID: .register) as? RegisterController
         return vc!
-    }()
+    }
     
-    static var inboxController: InboxController = {
+    var inboxController: InboxController {
         let vc = getController(storyboardID: .main, controllerID: .inbox) as? InboxController
         return vc!
-    }()
+    }
 }

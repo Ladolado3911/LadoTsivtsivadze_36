@@ -44,11 +44,12 @@ class LoginController: UIViewController {
             return
         }
         loginViewModel.login(username: usernameField.text!, password: passwordField.text!) { user in
-            let vc = Controllers.inboxController
+            let vc = Controllers().inboxController
             if let user = user {
-                //vc.navigationItem.hidesBackButton = true
                 print("Found User")
-                //pushController(from: self, to: vc, method: .withBackItem)
+                vc.navigationItem.hidesBackButton = true
+                vc.user = user
+                pushController(from: self, to: vc, method: .withBackItem)
             }
             else {
                 print("Could not find user")
@@ -57,6 +58,6 @@ class LoginController: UIViewController {
     }
     
     @IBAction func goToRegister(_ sender: UIButton) {
-        pushController(from: self, to: Controllers.registerController, method: .withBackItem)
+        pushController(from: self, to: Controllers().registerController, method: .withBackItem)
     }
 }

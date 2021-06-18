@@ -17,9 +17,7 @@ class InboxController: UIViewController {
     private var inboxViewModel: InboxViewModel!
     private var inboxDataSource: InboxDataSource!
     
-    
     @IBOutlet weak var tblView: UITableView!
-    
     
     override func loadView() {
         super.loadView()
@@ -42,10 +40,17 @@ class InboxController: UIViewController {
                                               viewmodel: inboxViewModel)
         }
         else {
-            let vc = Controllers.loginController
+            let vc = Controllers().loginController
             vc.navigationItem.hidesBackButton = true
             pushController(from: self, to: vc, method: .withBackItem)
         }
+    }
+    
+    @IBAction func onOutbox(_ sender: UIBarButtonItem) {
+    }
+    
+    @IBAction func onLogout(_ sender: UIBarButtonItem) {
+        
     }
 }
 

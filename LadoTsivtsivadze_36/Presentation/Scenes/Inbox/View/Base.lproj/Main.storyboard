@@ -17,20 +17,42 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="orF-hg-V1t">
-                                <rect key="frame" x="20" y="160" width="374" height="682"/>
+                                <rect key="frame" x="20" y="160" width="374" height="640"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uWT-uo-g3L">
+                                <rect key="frame" x="20" y="810" width="374" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Compose"/>
+                                <connections>
+                                    <action selector="onCompose:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DFV-ib-egs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uWT-uo-g3L" secondAttribute="trailing" constant="20" id="0WH-4c-NZ8"/>
                             <constraint firstItem="orF-hg-V1t" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="2TF-TV-v7b"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="orF-hg-V1t" secondAttribute="trailing" constant="20" id="Gdz-e2-bVt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="uWT-uo-g3L" secondAttribute="bottom" constant="10" id="JhK-C1-GTB"/>
                             <constraint firstItem="orF-hg-V1t" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="KLR-JO-0b9"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="orF-hg-V1t" secondAttribute="bottom" constant="20" id="zxA-7h-a3I"/>
+                            <constraint firstItem="uWT-uo-g3L" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Mfo-l8-OPe"/>
+                            <constraint firstItem="uWT-uo-g3L" firstAttribute="top" secondItem="orF-hg-V1t" secondAttribute="bottom" constant="10" id="pw2-V1-Fcs"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Inbox" id="W43-0G-mtF"/>
+                    <navigationItem key="navigationItem" title="Inbox" id="W43-0G-mtF">
+                        <barButtonItem key="leftBarButtonItem" title="Log out" id="WI4-Nu-FCo">
+                            <connections>
+                                <action selector="onLogout:" destination="BYZ-38-t0r" id="f5u-XI-R9t"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Outbox" style="plain" id="BXb-Ph-Bxi">
+                            <connections>
+                                <action selector="onOutbox:" destination="BYZ-38-t0r" id="vyF-Fm-xbx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tblView" destination="orF-hg-V1t" id="MOU-g4-RT2"/>
                     </connections>

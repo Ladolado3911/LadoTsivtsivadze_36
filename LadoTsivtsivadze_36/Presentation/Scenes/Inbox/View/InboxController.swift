@@ -50,6 +50,10 @@ class InboxController: UIViewController {
     }
     
     @IBAction func onLogout(_ sender: UIBarButtonItem) {
+        popControllerCustom(from: self, method: .withBackItem, number: 1)
+    }
+    
+    @IBAction func onCompose(_ sender: UIButton) {
         
     }
 }

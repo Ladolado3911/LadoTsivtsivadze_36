@@ -40,6 +40,13 @@ func pushTabBarController(from controller1: UIViewController, to tabbarControlle
     controller1.present(tabbarController, animated: true, completion: nil)
 }
 
+func popControllerCustom(from controller: UIViewController, method mtd: Method, number times: Int) {
+    controller.navigationController?.navigationBar.isHidden = mtd == .withoutBackItem ? true : false
+    for _ in 0..<times {
+        controller.navigationController?.popViewController(animated: false)
+    }
+}
+
 //func getTabBarController(storyboardID id1: StoryboardID, controllerID id2: TabbarControllerID) -> TabbarController {
 //    let tb = UIStoryboard(name: id1.rawValue, bundle: nil).instantiateViewController(identifier: id2.rawValue) as? TabbarController
 //    return tb!

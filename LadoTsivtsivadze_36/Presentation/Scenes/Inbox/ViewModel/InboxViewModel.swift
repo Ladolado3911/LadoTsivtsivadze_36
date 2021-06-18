@@ -11,7 +11,7 @@ import UIKit
 protocol InboxViewModelProtocol: AnyObject {
     func getReceivedMails(user usr: User, completion: @escaping ([Mail]?) -> Void)
     
-    init(with1 mailManager: MailManager, with2 userManager: UserManager, with3 controller: InboxController)
+    init(with1 mailManager: MailManager, with2 userManager: UserManager, with3 controller: InboxController, with4 user2: User)
 }
 
 final class InboxViewModel: InboxViewModelProtocol {
@@ -30,10 +30,11 @@ final class InboxViewModel: InboxViewModelProtocol {
         }
     }
     
-    init(with1 mailManager1: MailManager, with2 userManager2: UserManager, with3 controller: InboxController) {
+    init(with1 mailManager1: MailManager, with2 userManager2: UserManager, with3 controller: InboxController, with4 user2: User) {
         userManager = userManager2
         mailManager = mailManager1
         rootController = controller
+        user = user2
     }
     
     func getReceivedMails(user usr: User, completion: @escaping ([Mail]?) -> Void) {

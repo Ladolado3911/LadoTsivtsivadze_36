@@ -17,7 +17,7 @@ enum ControllerID: String {
 
 enum StoryboardID: String {
     case main = "Main"
-    case login = "LoginController"
-    case register = "RegisterController"
-    case outbox = "OutboxController"
+    case login = "Login"
+    case register = "Register"
+    case outbox = "Outbox"
 }

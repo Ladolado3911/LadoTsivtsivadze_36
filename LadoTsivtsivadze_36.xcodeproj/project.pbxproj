@@ -31,6 +31,8 @@
 		240B129E267D0B89001A177D /* OutboxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240B129D267D0B89001A177D /* OutboxViewModel.swift */; };
 		240B12A0267D0DFC001A177D /* InboxDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240B129F267D0DFC001A177D /* InboxDataSource.swift */; };
 		240B12A2267D0E51001A177D /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240B12A1267D0E51001A177D /* Typealiases.swift */; };
+		240B12A6267D1204001A177D /* InboxCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240B12A4267D1204001A177D /* InboxCell.swift */; };
+		240B12A7267D1204001A177D /* InboxCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 240B12A5267D1204001A177D /* InboxCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +62,8 @@
 		240B129D267D0B89001A177D /* OutboxViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutboxViewModel.swift; sourceTree = "<group>"; };
 		240B129F267D0DFC001A177D /* InboxDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxDataSource.swift; sourceTree = "<group>"; };
 		240B12A1267D0E51001A177D /* Typealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
+		240B12A4267D1204001A177D /* InboxCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxCell.swift; sourceTree = "<group>"; };
+		240B12A5267D1204001A177D /* InboxCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InboxCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +164,7 @@
 		240B1270267CB204001A177D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				240B12A3267D11D9001A177D /* Cells */,
 				240B1257267CB0F8001A177D /* InboxController.swift */,
 				240B1259267CB0F8001A177D /* Main.storyboard */,
 			);
@@ -281,6 +286,15 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		240B12A3267D11D9001A177D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				240B12A4267D1204001A177D /* InboxCell.swift */,
+				240B12A5267D1204001A177D /* InboxCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -339,6 +353,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				240B1284267CBD88001A177D /* Login.storyboard in Resources */,
+				240B12A7267D1204001A177D /* InboxCell.xib in Resources */,
 				240B128D267CBE1A001A177D /* Outbox.storyboard in Resources */,
 				240B1263267CB0F9001A177D /* LaunchScreen.storyboard in Resources */,
 				240B1260267CB0F9001A177D /* Assets.xcassets in Resources */,
@@ -362,6 +377,7 @@
 				240B1296267CBFC8001A177D /* IDs.swift in Sources */,
 				240B127C267CB7E9001A177D /* UserManager.swift in Sources */,
 				240B129A267D06CE001A177D /* LoginViewModel.swift in Sources */,
+				240B12A6267D1204001A177D /* InboxCell.swift in Sources */,
 				240B1298267CC170001A177D /* InboxViewModel.swift in Sources */,
 				240B1288267CBDB2001A177D /* RegisterController.swift in Sources */,
 				240B12A0267D0DFC001A177D /* InboxDataSource.swift in Sources */,

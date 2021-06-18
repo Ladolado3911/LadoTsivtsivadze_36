@@ -36,6 +36,9 @@ class InboxDataSource: TableDataSource {
     func configTable() {
         tableView.dataSource = self
         tableView.delegate = self
+        
+        let nib = UINib(nibName: "InboxCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "InboxCell")
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -43,6 +46,8 @@ class InboxDataSource: TableDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "InboxCell") as? InboxCell
+        cell!.mail = inboxMails[indexPath.row]
+        return cell!
     }
 }

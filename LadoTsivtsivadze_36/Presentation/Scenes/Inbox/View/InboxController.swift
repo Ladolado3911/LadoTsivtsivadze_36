@@ -18,21 +18,22 @@ class InboxController: UIViewController {
     
     override func loadView() {
         super.loadView()
+        configViewModel()
         if !inboxViewModel.isUserLoggedin {
-            
+            inboxViewModel.goToLogin()
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configViewModel()
+        
 
     }
     
     func configViewModel() {
         userManager = UserManager()
         mailManager = MailManager()
-        inboxViewModel = InboxViewModel(with1: mailManager, with2: userManager)
+        inboxViewModel = InboxViewModel(with1: mailManager, with2: userManager, with3: self)
     }
 }
 

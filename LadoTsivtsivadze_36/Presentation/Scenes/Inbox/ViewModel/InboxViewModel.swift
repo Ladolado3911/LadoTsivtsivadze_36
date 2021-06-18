@@ -14,8 +14,6 @@ protocol InboxViewModelProtocol: AnyObject {
     init(with1 mailManager: MailManager, with2 userManager: UserManager, with3 controller: InboxController)
 }
 
-
-
 final class InboxViewModel: InboxViewModelProtocol {
     
     var userManager: UserManager!

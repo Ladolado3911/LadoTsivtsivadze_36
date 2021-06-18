@@ -41,6 +41,8 @@ final class InboxViewModel: InboxViewModelProtocol {
     }
     
     func goToLogin() {
+        let vc = Controllers.loginController
+        vc.navigationItem.hidesBackButton = true
         pushController(from: rootController, to: Controllers.loginController, method: .withBackItem)
     }
 }

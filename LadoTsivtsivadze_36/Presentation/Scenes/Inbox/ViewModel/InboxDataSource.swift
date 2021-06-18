@@ -21,10 +21,16 @@ class InboxDataSource: TableDataSource {
         tableView = tableView2
         rootController = controller
         viewModel = vm
+        user = viewModel.user
     }
     
     func updateTable() {
-        //viewModel.getReceivedMails(user: <#T##User#>, completion: <#T##([Mail]?) -> Void#>)
+        guard let user = user else { return }
+        viewModel.getReceivedMails(user: user) { receivedMails in
+            guard let mails = receivedMails else { return }
+            self.inboxMails.append(contentsOf: mails)
+            self.tableView.reloadData()
+        }
     }
     
     func configTable() {
@@ -33,7 +39,7 @@ class InboxDataSource: TableDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        0
+        inboxMails.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

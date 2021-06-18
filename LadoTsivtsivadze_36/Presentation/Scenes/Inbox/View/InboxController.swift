@@ -36,9 +36,12 @@ class InboxController: UIViewController {
     }
     
     func configViewModel() {
+        guard let user = user else { return }
+        
         userManager = UserManager()
         mailManager = MailManager()
         inboxViewModel = InboxViewModel(with1: mailManager, with2: userManager, with3: self)
+        inboxViewModel.user = user
         inboxDataSource = InboxDataSource(with: tblView,
                                           rootController: self,
                                           viewmodel: inboxViewModel)

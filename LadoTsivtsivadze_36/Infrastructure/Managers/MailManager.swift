@@ -24,6 +24,16 @@ final class MailManager {
     }
     
     func getSentMails(user usr: User, completion: @escaping ([Mail]?) -> Void) {
+        if let sentMails = usr.sentMails?.allObjects as? [Mail] {
+            completion(sentMails)
+        }
+        else {
+            completion(nil)
+        }
+    }
+    
+    func createMail() {
         
     }
+    
 }

@@ -52,4 +52,23 @@ final class UserManager {
             completion(nil)
         }
     }
+    
+    func getAllUsers(completion: @escaping ([User]?) -> Void) {
+        guard let context = context else { return }
+        
+        do {
+            let request = NSFetchRequest<User>(entityName: "User")
+            let users = try context.fetch(request)
+            
+            completion(users)
+        }
+        catch {
+            print(error)
+            completion(nil)
+        }
+    }
+    
+    func getUser(by username: String, completion: @escaping (User?) -> Void) {
+        
+    }
 }

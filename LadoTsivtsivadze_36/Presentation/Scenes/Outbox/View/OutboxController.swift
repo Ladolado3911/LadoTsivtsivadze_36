@@ -9,21 +9,20 @@ import UIKit
 
 class OutboxController: UIViewController {
 
+    private var mailManager: MailManager!
+    private var userManager: UserManager!
+    private var outboxViewModel: OutboxViewModel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        configViewModel()
 
-        // Do any additional setup after loading the view.
+
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func configViewModel() {
+        mailManager = MailManager()
+        userManager = UserManager()
+        outboxViewModel = OutboxViewModel(with1: mailManager, with2: userManager, with3: self)
     }
-    */
-
 }

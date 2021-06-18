@@ -28,6 +28,7 @@
 		240B1298267CC170001A177D /* InboxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240B1297267CC170001A177D /* InboxViewModel.swift */; };
 		240B129A267D06CE001A177D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240B1299267D06CE001A177D /* LoginViewModel.swift */; };
 		240B129C267D0A0B001A177D /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240B129B267D0A0B001A177D /* RegisterViewModel.swift */; };
+		240B129E267D0B89001A177D /* OutboxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240B129D267D0B89001A177D /* OutboxViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		240B1297267CC170001A177D /* InboxViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxViewModel.swift; sourceTree = "<group>"; };
 		240B1299267D06CE001A177D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		240B129B267D0A0B001A177D /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		240B129D267D0B89001A177D /* OutboxViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutboxViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +262,7 @@
 		240B128B267CBE05001A177D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				240B129D267D0B89001A177D /* OutboxViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				240B128F267CBE32001A177D /* OutboxController.swift in Sources */,
 				240B127E267CB7F6001A177D /* MailManager.swift in Sources */,
 				240B1294267CBFA0001A177D /* NavigationHelpers.swift in Sources */,
+				240B129E267D0B89001A177D /* OutboxViewModel.swift in Sources */,
 				240B1256267CB0F8001A177D /* SceneDelegate.swift in Sources */,
 				240B1282267CBD65001A177D /* LoginController.swift in Sources */,
 			);

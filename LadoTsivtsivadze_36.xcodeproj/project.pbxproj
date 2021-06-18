@@ -33,6 +33,9 @@
 		240B12A2267D0E51001A177D /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240B12A1267D0E51001A177D /* Typealiases.swift */; };
 		240B12A6267D1204001A177D /* InboxCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240B12A4267D1204001A177D /* InboxCell.swift */; };
 		240B12A7267D1204001A177D /* InboxCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 240B12A5267D1204001A177D /* InboxCell.xib */; };
+		240B12AC267D2A39001A177D /* Compose.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 240B12AB267D2A39001A177D /* Compose.storyboard */; };
+		240B12AE267D2A52001A177D /* ComposeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240B12AD267D2A52001A177D /* ComposeController.swift */; };
+		240B12B0267D2B78001A177D /* ComposeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240B12AF267D2B78001A177D /* ComposeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +67,9 @@
 		240B12A1267D0E51001A177D /* Typealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
 		240B12A4267D1204001A177D /* InboxCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxCell.swift; sourceTree = "<group>"; };
 		240B12A5267D1204001A177D /* InboxCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InboxCell.xib; sourceTree = "<group>"; };
+		240B12AB267D2A39001A177D /* Compose.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Compose.storyboard; sourceTree = "<group>"; };
+		240B12AD267D2A52001A177D /* ComposeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeController.swift; sourceTree = "<group>"; };
+		240B12AF267D2B78001A177D /* ComposeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +132,7 @@
 		240B126C267CB1DD001A177D /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				240B12A8267D2A0E001A177D /* Compose */,
 				240B1289267CBDED001A177D /* Outbox */,
 				240B126F267CB1EF001A177D /* Register */,
 				240B126E267CB1EA001A177D /* Login */,
@@ -295,6 +302,32 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		240B12A8267D2A0E001A177D /* Compose */ = {
+			isa = PBXGroup;
+			children = (
+				240B12AA267D2A23001A177D /* View */,
+				240B12A9267D2A15001A177D /* ViewModel */,
+			);
+			path = Compose;
+			sourceTree = "<group>";
+		};
+		240B12A9267D2A15001A177D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				240B12AF267D2B78001A177D /* ComposeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		240B12AA267D2A23001A177D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				240B12AB267D2A39001A177D /* Compose.storyboard */,
+				240B12AD267D2A52001A177D /* ComposeController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -359,6 +392,7 @@
 				240B1260267CB0F9001A177D /* Assets.xcassets in Resources */,
 				240B125B267CB0F8001A177D /* Main.storyboard in Resources */,
 				240B1286267CBD99001A177D /* Register.storyboard in Resources */,
+				240B12AC267D2A39001A177D /* Compose.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,8 +403,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				240B12AE267D2A52001A177D /* ComposeController.swift in Sources */,
 				240B125E267CB0F8001A177D /* LadoTsivtsivadze_36.xcdatamodeld in Sources */,
 				240B129C267D0A0B001A177D /* RegisterViewModel.swift in Sources */,
+				240B12B0267D2B78001A177D /* ComposeViewModel.swift in Sources */,
 				240B1292267CBF3C001A177D /* Controllers.swift in Sources */,
 				240B1258267CB0F8001A177D /* InboxController.swift in Sources */,
 				240B1254267CB0F8001A177D /* AppDelegate.swift in Sources */,

@@ -52,7 +52,23 @@ class ComposeController: UIViewController {
     }
     
     @IBAction func onSned(_ sender: UIButton) {
-        
+        guard let me = me else { return }
+        let destinationUsername = usersExceptMe[userPicker.selectedRow(inComponent: 0)].username ?? ""
+        userManager.getUserByUsername(username: destinationUsername) { user in
+            guard let user = user else { return }
+            self.composeViewModel.sendMail(from: me,
+                                           to: user,
+                                           subject: self.subjectField.text!,
+                                           content: self.contentField.text) { success in
+                
+                if success {
+                    print("Sent Successfuly")
+                }
+                else {
+                    print("Could not send")
+                }
+            }
+        }
     }
 }
 
@@ -62,12 +78,10 @@ extension ComposeController: UIPickerViewDataSource, UIPickerViewDelegate {
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        print("here")
         return usersExceptMe.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        print(usersExceptMe.map { $0.username })
         return usersExceptMe[row].username
     }
 }

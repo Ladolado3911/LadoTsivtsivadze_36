@@ -18,19 +18,26 @@ class InboxDataSource: TableDataSource {
     var user: User?
     
     init(with tableView2: UITableView, rootController controller: InboxController, viewmodel vm: InboxViewModel) {
+        super.init()
         tableView = tableView2
         rootController = controller
         viewModel = vm
         user = viewModel.user
+        configTable()
     }
     
-    func updateTable() {
+    func addToTable() {
         guard let user = user else { return }
         viewModel.getReceivedMails(user: user) { receivedMails in
             guard let mails = receivedMails else { return }
             self.inboxMails.append(contentsOf: mails)
+            print(self.inboxMails)
             self.tableView.reloadData()
         }
+    }
+    
+    func refresh() {
+        tableView.reloadData()
     }
     
     func configTable() {
@@ -42,12 +49,14 @@ class InboxDataSource: TableDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        inboxMails.count
+        print(inboxMails.count)
+        return inboxMails.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "InboxCell") as? InboxCell
         cell!.mail = inboxMails[indexPath.row]
+        print(inboxMails[indexPath.row].subject)
         return cell!
     }
 }

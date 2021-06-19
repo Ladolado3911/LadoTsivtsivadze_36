@@ -26,8 +26,14 @@ class InboxController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //inboxDataSource.addToTable()
 
+
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        inboxDataSource.refresh()
     }
     
     func configViewModel() {
@@ -38,6 +44,7 @@ class InboxController: UIViewController {
             inboxDataSource = InboxDataSource(with: tblView,
                                               rootController: self,
                                               viewmodel: inboxViewModel)
+            inboxDataSource.addToTable()
         }
         else {
             let vc = Controllers().loginController

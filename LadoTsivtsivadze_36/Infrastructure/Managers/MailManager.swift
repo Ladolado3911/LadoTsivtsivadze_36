@@ -44,6 +44,9 @@ final class MailManager {
         newMail.sender = user1
         newMail.receiver = user2
         
+        user1.addToSentMails(newMail)
+        user2.addToReceivedMails(newMail)
+        
         newMail.subject = sbjct
         newMail.content = cnt
         

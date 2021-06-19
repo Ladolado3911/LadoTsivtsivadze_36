@@ -85,4 +85,26 @@ final class UserManager {
             completion(nil)
         }
     }
+    
+    func getUserByUsername(username name: String, completion: @escaping (User?) -> Void) {
+        guard let context = context else { return }
+
+        do {
+            let request = NSFetchRequest<User>(entityName: "User")
+            let predicate = NSPredicate(format: "username = \(name)")
+            request.predicate = predicate
+            
+            let users = try context.fetch(request)
+            if users.count == 1 {
+                completion(users.last)
+            }
+            else {
+                completion(nil)
+            }
+        }
+        catch {
+            print(error)
+            completion(nil)
+        }
+    }
 }

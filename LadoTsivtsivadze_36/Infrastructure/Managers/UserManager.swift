@@ -68,7 +68,21 @@ final class UserManager {
         }
     }
     
-    func getUser(by username: String, completion: @escaping (User?) -> Void) {
+    func getAllUsersExceptMe(except user: User, completion: @escaping ([User]?) -> Void) {
+        guard let context = context else { return }
+        guard let username = user.username else { return }
         
+        do {
+            let request = NSFetchRequest<User>(entityName: "User")
+            let predicate = NSPredicate(format: "username != \(username)")
+            request.predicate = predicate
+            
+            let users = try context.fetch(request)
+            completion(users)
+        }
+        catch {
+            print(error)
+            completion(nil)
+        }
     }
 }

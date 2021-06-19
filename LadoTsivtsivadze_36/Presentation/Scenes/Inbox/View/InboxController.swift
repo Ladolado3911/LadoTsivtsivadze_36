@@ -54,7 +54,7 @@ class InboxController: UIViewController {
     }
     
     @IBAction func onCompose(_ sender: UIButton) {
-        
+        pushController(from: self, to: Controllers().composeController, method: .withBackItem)
     }
 }
 

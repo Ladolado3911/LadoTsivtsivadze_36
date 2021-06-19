@@ -29,4 +29,9 @@ class Controllers {
         let vc = getController(storyboardID: .main, controllerID: .inbox) as? InboxController
         return vc!
     }
+    
+    var composeController: ComposeController {
+        let vc = getController(storyboardID: .compose, controllerID: .compose) as? ComposeController
+        return vc!
+    }
 }

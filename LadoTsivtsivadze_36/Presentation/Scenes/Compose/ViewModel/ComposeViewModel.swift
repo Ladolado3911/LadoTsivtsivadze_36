@@ -10,7 +10,11 @@ import UIKit
 
 
 protocol ComposeViewModelProtocol: AnyObject {
-    func sendMail(from user1: User, to user2: User, completion: @escaping (Bool) -> Void)
+    func sendMail(from user1: User,
+                  to user2: User,
+                  subject sbjct: String,
+                  content cnt: String,
+                  completion: @escaping (Bool) -> Void)
     
     init(with1 mailManager2: MailManager, with2 userManager2: UserManager, with3 controller: ComposeController)
 }
@@ -27,7 +31,13 @@ final class ComposeViewModel: ComposeViewModelProtocol {
         rootController = controller
     }
     
-    func sendMail(from user1: User, to user2: User, completion: @escaping (Bool) -> Void) {
+    func sendMail(from user1: User,
+                  to user2: User,
+                  subject sbjct: String,
+                  content cnt: String,
+                  completion: @escaping (Bool) -> Void) {
+        
+        mailManager.createMail(from: user1, to: user2, subject: sbjct, content: cnt, completion: completion)
         
     }
 }

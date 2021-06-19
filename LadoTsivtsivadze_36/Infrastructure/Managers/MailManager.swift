@@ -32,7 +32,28 @@ final class MailManager {
         }
     }
     
-    func createMail() {
+    func createMail(from user1: User,
+                    to user2: User,
+                    subject sbjct: String,
+                    content cnt: String,
+                    completion: @escaping (Bool) -> Void) {
         
+        guard let context = context else { return }
+        let newMail = Mail(context: context)
+        
+        newMail.sender = user1
+        newMail.receiver = user2
+        
+        newMail.subject = sbjct
+        newMail.content = cnt
+        
+        do {
+            try context.save()
+            completion(true)
+        }
+        catch {
+            print(error)
+            completion(false)
+        }
     }
 }

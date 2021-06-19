@@ -36,6 +36,9 @@
 		240B12AC267D2A39001A177D /* Compose.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 240B12AB267D2A39001A177D /* Compose.storyboard */; };
 		240B12AE267D2A52001A177D /* ComposeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240B12AD267D2A52001A177D /* ComposeController.swift */; };
 		240B12B0267D2B78001A177D /* ComposeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240B12AF267D2B78001A177D /* ComposeViewModel.swift */; };
+		245A2C79267DC6750005724A /* OutboxDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245A2C78267DC6750005724A /* OutboxDataSource.swift */; };
+		245A2C7D267DC76C0005724A /* OutboxCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245A2C7B267DC76C0005724A /* OutboxCell.swift */; };
+		245A2C7E267DC76C0005724A /* OutboxCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 245A2C7C267DC76C0005724A /* OutboxCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +73,9 @@
 		240B12AB267D2A39001A177D /* Compose.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Compose.storyboard; sourceTree = "<group>"; };
 		240B12AD267D2A52001A177D /* ComposeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeController.swift; sourceTree = "<group>"; };
 		240B12AF267D2B78001A177D /* ComposeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeViewModel.swift; sourceTree = "<group>"; };
+		245A2C78267DC6750005724A /* OutboxDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutboxDataSource.swift; sourceTree = "<group>"; };
+		245A2C7B267DC76C0005724A /* OutboxCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutboxCell.swift; sourceTree = "<group>"; };
+		245A2C7C267DC76C0005724A /* OutboxCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OutboxCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,6 +277,7 @@
 		240B128A267CBDFA001A177D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				245A2C7A267DC7460005724A /* Cells */,
 				240B128C267CBE1A001A177D /* Outbox.storyboard */,
 				240B128E267CBE32001A177D /* OutboxController.swift */,
 			);
@@ -281,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				240B129D267D0B89001A177D /* OutboxViewModel.swift */,
+				245A2C78267DC6750005724A /* OutboxDataSource.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -326,6 +334,15 @@
 				240B12AD267D2A52001A177D /* ComposeController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		245A2C7A267DC7460005724A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				245A2C7B267DC76C0005724A /* OutboxCell.swift */,
+				245A2C7C267DC76C0005724A /* OutboxCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -392,6 +409,7 @@
 				240B1260267CB0F9001A177D /* Assets.xcassets in Resources */,
 				240B125B267CB0F8001A177D /* Main.storyboard in Resources */,
 				240B1286267CBD99001A177D /* Register.storyboard in Resources */,
+				245A2C7E267DC76C0005724A /* OutboxCell.xib in Resources */,
 				240B12AC267D2A39001A177D /* Compose.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +430,8 @@
 				240B1254267CB0F8001A177D /* AppDelegate.swift in Sources */,
 				240B1296267CBFC8001A177D /* IDs.swift in Sources */,
 				240B127C267CB7E9001A177D /* UserManager.swift in Sources */,
+				245A2C7D267DC76C0005724A /* OutboxCell.swift in Sources */,
+				245A2C79267DC6750005724A /* OutboxDataSource.swift in Sources */,
 				240B129A267D06CE001A177D /* LoginViewModel.swift in Sources */,
 				240B12A6267D1204001A177D /* InboxCell.swift in Sources */,
 				240B1298267CC170001A177D /* InboxViewModel.swift in Sources */,

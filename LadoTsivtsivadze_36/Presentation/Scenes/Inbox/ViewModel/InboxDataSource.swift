@@ -30,7 +30,7 @@ class InboxDataSource: TableDataSource {
         guard let user = user else { return }
         viewModel.getReceivedMails(user: user) { receivedMails in
             guard let mails = receivedMails else { return }
-            self.inboxMails.append(contentsOf: mails)
+            self.inboxMails = mails
             print(self.inboxMails)
             self.tableView.reloadData()
         }
@@ -49,14 +49,14 @@ class InboxDataSource: TableDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(inboxMails.count)
+        //print(inboxMails.count)
         return inboxMails.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "InboxCell") as? InboxCell
         cell!.mail = inboxMails[indexPath.row]
-        print(inboxMails[indexPath.row].subject)
+        //print(inboxMails[indexPath.row].subject)
         return cell!
     }
 }

@@ -54,6 +54,10 @@ class InboxController: UIViewController {
     }
     
     @IBAction func onOutbox(_ sender: UIBarButtonItem) {
+        let vc = Controllers().outboxController
+        //print(user)
+        vc.user = user
+        pushController(from: self, to: vc, method: .withBackItem)
     }
     
     @IBAction func onLogout(_ sender: UIBarButtonItem) {
